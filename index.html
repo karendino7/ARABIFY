@@ -9,8 +9,6 @@
 <style>
 :root{--bg:#f6f8f7;--ink:#0f2a3a;--mut:#4a6270;--teal:#1f7a6d;--sun:#f2c14e;--line:#d5e0dd;--hero:#0f2a3a;--herotxt:#f6f8f7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1c27;--ink:#e8f0ee;--mut:#9fb5bd;--line:#1e3846;--hero:#071219;--herotxt:#e8f0ee}}
-:root[data-theme="dark"]{--bg:#0b1c27;--ink:#e8f0ee;--mut:#9fb5bd;--line:#1e3846;--hero:#071219;--herotxt:#e8f0ee}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.9 Vazirmatn,Tahoma,sans-serif}
 .hero{background:var(--hero);color:var(--herotxt);padding:56px 22px 64px;text-align:center}
@@ -34,22 +32,39 @@ ul.why span{color:var(--mut);font-size:15px}
 .join .btn{background:#fff}
 .id{direction:ltr;display:inline-block;margin-top:14px;opacity:.9;font-weight:600}
 footer{text-align:center;color:var(--mut);font-size:14px;padding:0 22px 40px}
+.grades a{display:block;color:inherit;text-decoration:none}
+.grades li:has(a){padding:0}.grades li a{padding:12px 6px}
+.grades li:hover,.grades li:focus-within{background:var(--teal);color:#fff}
+.grades li:hover b,.grades li:focus-within b{color:var(--sun)}
+
+:root{--bg:#000;--ink:#f2ede4;--mut:#b5ab9a;--teal:#b08d57;--sun:#d2b48c;--line:#2b261e;--hero:#000;--herotxt:#f2ede4;--on:#120d06}
+.btn{background:var(--teal);color:var(--on)}
+.btn:focus-visible{outline-color:var(--sun)}
+.grades li:hover,.grades li:focus-within{color:var(--on)}
+.grades li:hover b,.grades li:focus-within b{color:var(--on)}
+.others a[aria-current]{color:var(--on)}
+ol.lessons a::before{color:var(--on)}
+ol.lessons a:hover,ol.lessons a:focus-visible{background:#15120d}
+.join{color:var(--on)}
+.join .btn{background:var(--on);color:var(--sun)}
+.surah{display:block;width:100%;max-width:520px;margin:0 auto 24px;border-radius:14px;border:1px solid var(--line)}
+.surah-txt{font:700 clamp(22px,5vw,30px)/2.2 Amiri,'Times New Roman',serif;color:var(--sun);max-width:640px;margin:0 auto 24px}
 </style>
 </head>
 <body>
 <header class="hero">
+  
   <p class="ar" lang="ar" dir="rtl">تَعَلَّمِ العَرَبِيَّةَ</p>
   <h1>عربی‌فای</h1>
   <p>آموزش عربی پایه‌های هفتم، هشتم و نهم؛ ساده، قابل‌فهم و مناسب آمادگی امتحان.</p>
-  <p>با استاد همتی راد</p>
-  <a class="btn" href="https://web.bale.ai/chat?uid=4641704725" rel="noopener">عضویت در کانال بله</a>
+  
 </header>
 <main>
   <h2>برای کدام پایه؟</h2>
   <ul class="grades">
-    <li><b>۷</b>هفتم</li>
-    <li><b>۸</b>هشتم</li>
-    <li><b>۹</b>نهم</li>
+    <li><a href="index7.html"><b>۷</b>هفتم</a></li>
+    <li><a href="index8.html"><b>۸</b>هشتم</a></li>
+    <li><a href="index9.html"><b>۹</b>نهم</a></li>
   </ul>
   <h2>در کانال چه می‌بینید؟</h2>
   <ul class="why">
@@ -59,8 +74,8 @@ footer{text-align:center;color:var(--mut);font-size:14px;padding:0 22px 40px}
     <li><strong>رفع اشکال درسی</strong><span>اگر بخشی از درس برایتان سخت است، اینجا همراه شماست.</span></li>
   </ul>
   <section class="join">
-    <p>عربی را بیاموز و درهای موفقیت را بگشا</p>
-    <a class="btn" href="https://web.bale.ai/chat?uid=4641704725" rel="noopener">همین حالا عضو شو</a><br>
+    <p>عربی را بیاموز و درهای موفقیت را بگشا.</p>
+  <P>استاد همتی راد</P>
     <span class="id">@arabiiedu</span>
   </section>
 </main>
